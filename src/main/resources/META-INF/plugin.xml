@@ -1,15 +1,24 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.grgprarup.gherlintellij</id>
-    <name>gherlintellij Template</name>
+    <name>Gherlintellij Template</name>
     <vendor>grgprarup</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.xml</depends>
+    <depends>org.jetbrains.kotlin</depends>
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.grgprarup.gherlintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+
+<!--        <fileType name="Cucumber"-->
+<!--                  implementationClass="org.jetbrains.plugins.cucumber"-->
+<!--                  extensions="feature"-->
+<!--                    icon="icons/cucumber.png"-->
+<!--                    pattern="*.feature"/>-->
+
     </extensions>
 
     <applicationListeners>
